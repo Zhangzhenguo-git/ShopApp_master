@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@color/colorPrimaryDark">
+        <ImageView
+            android:id="@+id/headLeftReturn"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="match_parent"
+            android:src="@drawable/shop_return_icon"
+            android:paddingTop="@dimen/dp_20"
+            android:layout_centerVertical="true">
+        </ImageView>
+        <TextView
+            android:id="@+id/headCenterTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="应用商店"
+            android:gravity="center"
+            android:textSize="@dimen/head_title_size"
+            android:textColor="@color/colorWhite"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+        </TextView>
+        <ImageView
+            android:id="@+id/headRightSearch"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="match_parent"
+            android:src="@drawable/shop_search_icon"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingTop="@dimen/dp_20">
+        </ImageView>
+    </RelativeLayout>
+
+</RelativeLayout>

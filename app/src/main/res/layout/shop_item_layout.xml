@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_90"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <ImageView
+        android:id="@+id/appListItemIvLogo"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="@dimen/dp_12"
+        tools:src="@mipmap/ic_launcher"
+        android:scaleType="fitXY"/>
+
+    <ImageView
+        android:id="@+id/appListItemIvIconOnline"
+        android:layout_width="@dimen/dp_10"
+        android:layout_height="@dimen/dp_10"
+        app:layout_constraintEnd_toEndOf="@id/appListItemIvLogo"
+        app:layout_constraintTop_toTopOf="@id/appListItemIvLogo"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        android:src="@mipmap/ic_launcher"/>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="80dp"></androidx.constraintlayout.widget.Guideline>
+
+    <TextView
+        android:id="@+id/appListItemTvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/appListItemIvLogo"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintBottom_toTopOf="@+id/rating"
+        android:layout_marginStart="@dimen/dp_10"
+        tools:text="应用名称应用名称应用名称应用名称应用名称"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="@color/c_030303"
+        android:textSize="@dimen/sp_16"
+        android:layout_marginTop="@dimen/dp_4"/>
+
+    <RatingBar
+        android:id="@+id/rating"
+        style="@style/scienceAppListItemRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:rating="0"
+        android:stepSize="1"
+        android:isIndicator="true"
+        app:layout_constraintStart_toStartOf="@id/appListItemTvTitle"
+        app:layout_constraintTop_toBottomOf="@id/appListItemTvTitle"
+        app:layout_constraintBottom_toTopOf="@+id/appListItemTvType"
+        />
+
+    <TextView
+        android:id="@+id/appListItemTvType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/appListItemTvTitle"
+        app:layout_constraintTop_toBottomOf="@id/rating"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/c_757575"
+        android:textSize="@dimen/sp_13"
+        android:text="类别:"
+        android:layout_marginBottom="@dimen/dp_2"/>
+
+    <TextView
+        android:id="@+id/appListItemTvAreaType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/appListItemTvType"
+        app:layout_constraintBottom_toBottomOf="@id/appListItemTvType"
+        app:layout_constraintStart_toEndOf="@id/appListItemTvType"
+        android:layout_marginStart="@dimen/dp_8"
+        android:textColor="@color/c_377eee"
+        android:textSize="@dimen/sp_10"
+        tools:text="老大用户"
+        android:background="@drawable/science_shape_area_type_bg"/>
+
+    <TextView
+        android:id="@+id/appListItemTvInstall"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_24"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/dp_12"
+        app:layout_constraintTop_toTopOf="@id/appListItemIvLogo"
+        android:layout_marginTop="@dimen/dp_6"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/c_3270f2"
+        android:text="安装"
+        android:background="@drawable/shop_item_open_bg"
+        />
+
+    <TextView
+        android:id="@+id/appListItemTvOpen"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_24"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/dp_12"
+        app:layout_constraintTop_toTopOf="@id/appListItemIvLogo"
+        android:layout_marginTop="@dimen/dp_6"
+        android:textSize="@dimen/sp_14"
+        android:text="打开"
+        android:textColor="@color/white"
+        android:background="@drawable/shop_item_install_bg"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/appListItemTvUpgrade"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_24"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/dp_12"
+        app:layout_constraintTop_toTopOf="@id/appListItemIvLogo"
+        android:layout_marginTop="@dimen/dp_6"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/c_3270f2"
+        android:text="升级"
+        android:background="@drawable/shop_item_open_bg"
+        android:visibility="gone"/>
+
+    <ProgressBar
+        android:id="@+id/appListItemProgressBar"
+        style="@style/scienceProgressBarHorizontal"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/appListItemIvLogo"
+        android:layout_marginTop="@dimen/dp_6"
+        android:layout_marginEnd="@dimen/dp_12"
+        tools:progress="50"/>
+
+    <TextView
+        android:id="@+id/appListItemTvProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/white"
+        tools:text="50%"
+        app:layout_constraintTop_toTopOf="@id/appListItemProgressBar"
+        app:layout_constraintBottom_toBottomOf="@id/appListItemProgressBar"
+        app:layout_constraintStart_toStartOf="@id/appListItemProgressBar"
+        app:layout_constraintEnd_toEndOf="@id/appListItemProgressBar"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/appListItemProgressGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="appListItemProgressBar,appListItemTvProgress"
+        android:visibility="gone"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_0_5"
+        app:layout_constraintStart_toStartOf="@id/appListItemTvTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/c_ebebeb"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

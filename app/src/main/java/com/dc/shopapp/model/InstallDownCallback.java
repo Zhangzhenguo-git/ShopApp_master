@@ -21,6 +21,14 @@ public class InstallDownCallback {
         this.mActivity=activity;
     }
 
+    /**
+     * 下载入口，根据需求添加各种参数，通过此方法调用网络请求下载接口
+     */
+    public void down(){
+//        下载中，下载文件，下载成功或失败通知在下方接口
+
+    }
+
 
     public interface setOnInstallDownListener{
         void onProgress();

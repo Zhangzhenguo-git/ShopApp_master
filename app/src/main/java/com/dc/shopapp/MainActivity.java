@@ -46,6 +46,8 @@ public class MainActivity extends BaseActivity implements MainViewCallback {
     public void initView() {
         mContext=MainActivity.this;
         mainPresenter=new MainPresenter(this);
+        shopHead.setHeadShowOrHide(View.VISIBLE,View.VISIBLE,View.VISIBLE,View.GONE);
+        shopHead.setHeadContent(R.drawable.shop_return_icon,"应用商店",R.drawable.shop_search_icon,null);
     }
 
     @Override

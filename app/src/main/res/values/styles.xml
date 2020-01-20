@@ -9,15 +9,30 @@
     </style>
 
     <style name="scienceAppListItemRatingBar" parent="@android:style/Widget.RatingBar">
-        <item name="android:progressDrawable">@drawable/science_drawable_ratingbar</item>
+        <item name="android:progressDrawable">@drawable/shop_drawable_ratingbar</item>
         <item name="android:minHeight">8dip</item>
         <item name="android:maxHeight">8dip</item>
     </style>
     <style name="scienceProgressBarHorizontal" parent="@android:style/Widget.ProgressBar.Horizontal">
         <item name="android:indeterminateOnly">false</item>
-        <item name="android:progressDrawable">@drawable/science_download_progress_horizontal</item>
+        <item name="android:progressDrawable">@drawable/shop_download_progress_horizontal</item>
         <item name="android:minHeight">@dimen/dp_24</item>
         <item name="android:maxHeight">@dimen/dp_24</item>
     </style>
 
+    <style name="MyRadioButton" parent="Theme.AppCompat.Light">
+        <!--<item name="colorControlNormal">@color/white</item>-->
+        <item name="colorControlActivated">@color/shop_msg_listitem_radiobutton_bg</item>
+    </style>
+
+    <style name="dialog" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
 </resources>

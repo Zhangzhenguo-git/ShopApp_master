@@ -3,6 +3,17 @@
     <dimen name="head_height">60dp</dimen>
     <dimen name="head_title_size">23sp</dimen>
 
+    <dimen name="shop_msg_titletextsize">16sp</dimen>
+    <dimen name="shop_msg_desctextsize">14sp</dimen>
+    <dimen name="shop_msg_intimetextsize">12sp</dimen>
+    <dimen name="shop_msg_details_titletextsize">18sp</dimen>
+    <dimen name="shop_msg_details_intimetextsize">12sp</dimen>
+    <dimen name="shop_msg_checkboxwidth">30dp</dimen>
+    <dimen name="shop_msg_checkboxheight">60dp</dimen>
+    <dimen name="shop_msg_iconlayoutsize">60dp</dimen>
+    <dimen name="shop_msg_iconsize">27dp</dimen>
+
+
 
     <dimen name="margin_16">16dp</dimen>
     <dimen name="margin_15">15dp</dimen>
@@ -465,5 +476,7 @@
     <dimen name="sp_40">40sp</dimen>
     <dimen name="sp_42">42sp</dimen>
     <dimen name="sp_48">48sp</dimen>
+
+
 
 </resources>

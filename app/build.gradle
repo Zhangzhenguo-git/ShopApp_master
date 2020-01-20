@@ -43,4 +43,6 @@ dependencies {
 
     //fastJson
     implementation 'com.alibaba:fastjson:1.2.59'
+
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0'
 }

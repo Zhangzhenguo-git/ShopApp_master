@@ -1,26 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/head_height"
-        android:background="@color/colorPrimaryDark">
+    android:layout_height="@dimen/head_height"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorPrimaryDark"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
         <ImageView
             android:id="@+id/headLeftReturn"
             android:layout_width="@dimen/dp_60"
             android:layout_height="match_parent"
-            android:src="@drawable/shop_return_icon"
+            tools:src="@drawable/shop_return_icon"
             android:paddingTop="@dimen/dp_20"
+            app:layout_constraintStart_toStartOf="parent"
             android:layout_centerVertical="true">
         </ImageView>
         <TextView
             android:id="@+id/headCenterTitle"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="应用商店"
+            tools:text="应用商店"
             android:gravity="center"
             android:textSize="@dimen/head_title_size"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             android:textColor="@color/colorWhite"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true">
@@ -30,10 +34,20 @@
             android:layout_width="@dimen/dp_60"
             android:layout_height="match_parent"
             android:src="@drawable/shop_search_icon"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
+            android:visibility="visible"
+            tools:layout_constraintEnd_toEndOf="parent"
             android:paddingTop="@dimen/dp_20">
         </ImageView>
-    </RelativeLayout>
+        <TextView
+            android:id="@+id/headRightEdit"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="match_parent"
+            tools:text="编辑"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_15"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent">
+        </TextView>
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

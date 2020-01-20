@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchActivity">
+    <!--  search bar start  -->
+    <View
+        android:id="@+id/appSearchBarBg"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_12"
+        android:background="@drawable/shop_search_bar_bg"
+        app:layout_constraintEnd_toStartOf="@+id/appSearchTvCancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/appSearchTvCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_6"
+        android:gravity="center"
+        android:padding="@dimen/dp_6"
+        android:text="取消"
+        android:textColor="@color/c_3270f2"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintBottom_toBottomOf="@id/appSearchBarBg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/appSearchBarBg"
+        app:layout_constraintTop_toTopOf="@id/appSearchBarBg" />
+
+    <ImageView
+        android:id="@+id/appSearchIvIcon"
+        android:layout_width="@dimen/dp_16"
+        android:layout_height="@dimen/dp_16"
+        android:layout_marginStart="@dimen/dp_10"
+        android:scaleType="fitXY"
+        android:src="@mipmap/shop_search_gray"
+        app:layout_constraintBottom_toBottomOf="@id/appSearchBarBg"
+        app:layout_constraintStart_toStartOf="@id/appSearchBarBg"
+        app:layout_constraintTop_toTopOf="@id/appSearchBarBg" />
+
+    <EditText
+        android:id="@+id/appSearchEtKeyword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_6"
+        android:layout_marginEnd="@dimen/dp_6"
+        android:background="@null"
+        android:hint="请输入名称进行搜索"
+        android:imeOptions="actionSearch"
+        android:singleLine="true"
+        android:textColor="@color/c_030303"
+        android:textColorHint="@color/c_9b9b9b"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintBottom_toBottomOf="@id/appSearchBarBg"
+        app:layout_constraintEnd_toEndOf="@id/appSearchBarBg"
+        app:layout_constraintStart_toEndOf="@id/appSearchIvIcon"
+        app:layout_constraintTop_toTopOf="@id/appSearchBarBg" />
+    <!--  search bar end  -->
+
+    <!--  empty view start  -->
+    <ImageView
+        android:id="@+id/ppSearchResultIvEmpty"
+        android:layout_width="@dimen/dp_154"
+        android:layout_height="@dimen/dp_100"
+        android:scaleType="fitXY"
+        android:src="@mipmap/shop_search_result_empty"
+        app:layout_constraintBottom_toTopOf="@+id/ppSearchResultTvEmpty"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appSearchBarBg"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/ppSearchResultTvEmpty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_30"
+        android:text="没有查询到相关信息"
+        android:textColor="@color/c_666666"
+        android:textSize="@dimen/dp_12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ppSearchResultIvEmpty" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/ppSearchResultEmptyGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="ppSearchResultIvEmpty,ppSearchResultTvEmpty" />
+
+
+    <ImageView
+        android:id="@+id/appSearchHistoryIvEmpty"
+        android:layout_width="@dimen/dp_170"
+        android:layout_height="@dimen/dp_135"
+        android:scaleType="fitXY"
+        android:src="@mipmap/shop_search_history_empty"
+        app:layout_constraintBottom_toTopOf="@+id/appSearchHistoryTvEmpty"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appSearchBarBg"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/appSearchHistoryTvEmpty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_24"
+        android:text="暂无搜索记录"
+        android:textColor="@color/c_666666"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appSearchHistoryIvEmpty" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/appSearchHistoryEmptyGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="appSearchHistoryIvEmpty,appSearchHistoryTvEmpty"
+        android:visibility="gone"/>
+
+
+    <TextView
+        android:id="@+id/appSearchTvHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="搜索历史"
+        android:textColor="@color/c_484848"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appSearchBarBg" />
+
+    <TextView
+        android:id="@+id/appSearchTvClean"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dp_5"
+        android:paddingEnd="@dimen/dp_12"
+        android:paddingBottom="@dimen/dp_5"
+        android:text="清空"
+        android:textColor="@color/c_3270f2"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintBottom_toBottomOf="@id/appSearchTvHistory"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/appSearchTvHistory" />
+
+    <ImageView
+        android:id="@+id/appSearchIvClean"
+        android:layout_width="@dimen/dp_22"
+        android:layout_height="@dimen/dp_22"
+        android:padding="@dimen/dp_5"
+        android:scaleType="fitXY"
+        android:src="@mipmap/shop_search_history_clean"
+        app:layout_constraintBottom_toBottomOf="@id/appSearchTvClean"
+        app:layout_constraintEnd_toStartOf="@id/appSearchTvClean"
+        app:layout_constraintTop_toTopOf="@id/appSearchTvClean" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/appSearchHistoryRv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dp_8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appSearchTvHistory" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/appSearchHistoryGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="appSearchTvHistory,appSearchHistoryRv,appSearchIvClean,appSearchTvClean"
+        android:visibility="gone"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/appSearchResultRv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dp_12"
+        android:background="@color/default_bg"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appSearchBarBg" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,4 +10,23 @@
     <color name="white">#ffffff</color>
     <color name="c_377eee">#377eee</color>
     <color name="c_ebebeb">#ebebeb</color>
+    <color name="c_9b9b9b">#9b9b9b</color>
+    <color name="c_666666">#666666</color>
+    <color name="c_484848">#484848</color>
+    <color name="default_bg" />
+    <color name="c_dddddd">#dddddd</color>
+
+    <color name="shop_msg_listitem_selected_statepressed_fase">#FFFFFF</color>
+    <color name="shop_msg_listitem_selected_statepressed_true">#f7f7f7</color>
+    <color name="shop_msg_listitem_title">#030303</color>
+    <color name="shop_msg_listitem_descriptions">#757575</color>
+    <color name="shop_msg_listitem_systype">#3270F2</color>
+    <color name="shop_msg_listitem_time">#999999</color>
+    <color name="shop_msg_listitem_titleright_bg">#E4EEFF</color>
+    <color name="shop_msg_listitem_radiobutton_bg">#ff3270f2</color>
+    <color name="shop_msg_listitem_righttop">#ffff942c</color>
+    <color name="gray">#808080</color>
+    <color name="red">#ff0000</color>
+    <color name="c_333333">#333333</color>
+    <color name="c_aaaaaa">#aaaaaa</color>
 </resources>

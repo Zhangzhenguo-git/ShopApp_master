@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':message'
 rootProject.name='ShopApp_master'

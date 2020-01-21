@@ -1,7 +1,6 @@
-package com.dc.shopapp.weight;
+package com.dc.myapplication.weight;
 
 import android.content.Context;
-import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,10 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.dc.shopapp.R;
-
-import org.w3c.dom.Text;
-
+import com.dc.myapplication.R;
 
 /**
  * @author Zhangzhenguo

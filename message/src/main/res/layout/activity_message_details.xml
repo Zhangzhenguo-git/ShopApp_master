@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MessageDetailsActivity">
+    <com.dc.myapplication.weight.HeadView
+        android:id="@+id/shopMessageDetailsActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.dc.myapplication.weight.HeadView>
+    <LinearLayout
+        android:id="@+id/shopMessageDetailsInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_12"
+        android:background="@color/white"
+        android:layout_below="@id/shopMessageDetailsActionBar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <FrameLayout
+                android:id="@+id/shopMsgNoticeframeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/shopMsgNoticeTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="双十一京东商品总计达电商商品总计66万单fdasf fdsffdsfasdfasdf"
+                    android:textColor="@color/msg_listitem_title"
+                    android:textSize="@dimen/shop_msg_details_titletextsize" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="right">
+                    <TextView
+                        android:id="@+id/shopMsgNoticeMsgType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:singleLine="true"
+                        tools:text="富文本"
+                        android:background="@drawable/msg_listitem_title_right_bg"
+                        android:textColor="@color/msg_listitem_systype"
+                        android:textSize="@dimen/shop_msg_intimetextsize" />
+                </RelativeLayout>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/shopMsgNoticeAppType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shopMsgNoticeframeLayout"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                tools:text="应用应用day1"
+                android:textColor="@color/msg_listitem_systype"
+                android:textSize="@dimen/shop_msg_intimetextsize" />
+            <TextView
+                android:id="@+id/shopMsgNoticeTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shopMsgNoticeframeLayout"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                tools:text="2019-10-12 09:32:52"
+                android:textColor="@color/msg_listitem_time"
+                android:textSize="@dimen/shop_msg_intimetextsize" />
+        </RelativeLayout>
+    </LinearLayout>
+    <WebView
+        android:id="@+id/shopMsgNoticeWebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/shopMessageDetailsInfo"
+        android:layout_marginTop="@dimen/dp_5">
+    </WebView>
+</RelativeLayout>

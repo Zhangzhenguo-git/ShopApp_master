@@ -83,6 +83,37 @@ public class MessageActivity extends BaseActivity implements MessageContract.Vie
                         initAdapter();
                         getMessageData(false);
                         break;
+                    case 2:
+                        ArrayList<String> pids=msg.getData().getStringArrayList("keys");
+                        if (messageAdapter.selectedCount == showData.size() - 1) {
+                            showData.clear();
+                            detailsDialog.dismiss();
+                            Toast.makeText(mContext, "删除成功", Toast.LENGTH_SHORT).show();
+                            fragmentMessageBottomlayout.setVisibility(View.GONE);
+                            messageAdapter.selectedCount = -1;
+                        } else {
+                            String [] whereArgs=new String[1];
+                            for (int i=0;i<pids.size();i++){
+                                whereArgs[0]=pids.get(i);
+                                //删除数据库
+                                    messageAdapter.selectedCount--;
+                                    //删除列表
+                                    for (int q=0;q<showData.size();q++){
+                                        if (showData.get(q).getDescription().equals(pids.get(i))){
+                                            showData.remove(q);
+                                            q--;
+                                        }
+                                    }
+                            }
+                            detailsDialog.dismiss();
+                            Toast.makeText(mContext, "删除成功", Toast.LENGTH_SHORT).show();
+                        }
+                        messageAdapter.notifyDataSetChanged();
+//                        showMessageStatusCount();
+                        if (shopMsgRadioButtonAll.isSelected()){
+                            addAllSelected(false);
+                        }
+                        break;
 
                 }
             }
@@ -105,9 +136,14 @@ public class MessageActivity extends BaseActivity implements MessageContract.Vie
 
             @Override
             public void onHeadRight(View view) {
-                if (msgHeadView.getHeadRightView().equals("编辑")) {
+
+            }
+
+            @Override
+            public void onHeadTextRight(View v) {
+                if (msgHeadView.getHeadRightTextView().getText().equals("编辑")) {
                     reSetMessageIsEdit(true, false,"取消");
-                } else if (msgHeadView.getHeadRightView().equals("取消")) {
+                } else if (msgHeadView.getHeadRightTextView().getText().equals("取消")) {
                     reSetMessageIsEdit(false, false,"编辑");
                 }
             }

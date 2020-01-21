@@ -81,6 +81,11 @@ public class MessageDetailsActivity extends BaseActivity {
             public void onHeadRight(View view) {
 
             }
+
+            @Override
+            public void onHeadTextRight(View v) {
+
+            }
         });
     }
 

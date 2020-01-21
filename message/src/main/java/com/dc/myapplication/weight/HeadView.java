@@ -70,6 +70,14 @@ public class HeadView extends FrameLayout {
                 }
             }
         });
+        headRightEdit.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (listener != null) {
+                    listener.onHeadTextRight(v);
+                }
+            }
+        });
     }
 
     /**
@@ -127,8 +135,8 @@ public class HeadView extends FrameLayout {
     /**
      * 获取View
      */
-    public TextView getHeadRightView() {
-        return headCenterTitle;
+    public ImageView getHeadRightView() {
+        return headRightSearch;
     }
     /**
      * 设置标题栏搜索按钮图标
@@ -140,8 +148,8 @@ public class HeadView extends FrameLayout {
     /**
      * 获取View
      */
-    public TextView getHeadConterTextView() {
-        return headCenterTitle;
+    public TextView getHeadRightTextView() {
+        return headRightEdit;
     }
 
     /**
@@ -156,6 +164,8 @@ public class HeadView extends FrameLayout {
     public interface onHeadItemClickListener {
         void onHeadReturn(View view);
         void onHeadRight(View view);
+
+        void onHeadTextRight(View v);
     }
 
     public void setOnHeadItemClickListener(onHeadItemClickListener listener) {
